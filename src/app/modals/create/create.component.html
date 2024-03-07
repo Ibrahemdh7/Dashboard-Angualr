@@ -1,0 +1,18 @@
+<!-- This is a simple form for demonstration. You should replace it with your actual form fields -->
+<div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Create Item</h5>
+      </div>
+      <div class="modal-body">
+        <form #createForm="ngForm" (ngSubmit)="onSubmit(createForm.value)">
+          <input type="text" class="form-control mb-2" placeholder="Name" name="name" ngModel required>
+          <input type="text" class="form-control mb-2" placeholder="Age" name="age" ngModel required>
+
+          <!-- Add other fields here -->
+          <button type="submit" class="btn btn-primary">Create</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  

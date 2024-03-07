@@ -1,0 +1,15 @@
+<div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Update Item</h5>
+      </div>
+      <div class="modal-body">
+        <form #updateForm="ngForm" (ngSubmit)="onSubmit(updateForm.value)">
+          <input type="text" class="form-control mb-2" placeholder="Name" name="name" [(ngModel)]="item.name" required>
+          <!-- Add other fields here -->
+          <button type="submit" class="btn btn-primary">Update</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  

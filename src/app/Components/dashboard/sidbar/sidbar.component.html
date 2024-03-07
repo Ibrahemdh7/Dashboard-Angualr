@@ -1,0 +1,15 @@
+<div class="row">
+    <nav class="flex-shrink-0 p-3 text-white bg-dark" style="height: 100vh;">
+      <div class="d-flex align-items-center mb-3 mb-md-0 me-md-auto">
+        <i class="bi bi-alexa" width="40" height="32"></i>  
+        <span class="fs-4">Sidebar</span>
+      </div>
+      <hr>
+      <ul class="nav nav-pills flex-column ">
+        <li class="nav-item" *ngFor="let item of menuItems">
+          <a [routerLink]="item.link" routerLinkActive="active" class="nav-link text-white px-3" [ngClass]="{'active': item.isActive}">
+            <i class="{{ item.icon }}"></i> {{ item.label }}
+          </a>
+        </li>
+      </ul>
+    </nav>

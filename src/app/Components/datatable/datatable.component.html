@@ -1,0 +1,38 @@
+<div class="container mt-3">
+    <div class="mb-2">
+        <button class="btn btn-primary" (click)="openCreateModal()">Add New Item</button>
+    </div>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of data">
+                <td>{{ item.id }}</td>
+                <td>{{ item.name }}</td>
+                <td>{{ item.age }}</td>
+                <td>{{ item.city }}</td>
+                <td>
+                    <button class="btn btn-primary btn-sm" (click)="openUpdateModal(item)">Edit</button>
+                    <button class="btn btn-danger btn-sm" (click)="openDeleteModal(item)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Create Modal -->
+    <app-create-modal *ngIf="showCreateModal" (create)="handleCreate($event)"></app-create-modal>
+
+    <!-- Update Modal -->
+    <app-update-modal *ngIf="showUpdateModal" [item]="selectedItem" (update)="handleUpdate($event)"></app-update-modal>
+
+    <!-- Delete Modal -->
+    <app-delete-modal *ngIf="showDeleteModal" [itemId]="selectedItem?.id" (delete)="handleDelete($event)"></app-delete-modal>
+</div>

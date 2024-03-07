@@ -14,6 +14,7 @@ Run `ng generate component component-name` to generate a new component. You can 
 تحتاج انك تحمل إطار عمل انجولار  ثم بعد ذلك حمل المكتبات التالية:
 ايبكس شارتس و بووت ستراب 
 https://apexcharts.com/angular-chart-demos/
+
 https://www.freecodecamp.org/news/how-to-add-bootstrap-css-framework-to-an-angular-application/
 بالتوفيق لكم
 
